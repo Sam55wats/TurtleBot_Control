@@ -4,7 +4,7 @@ This Arduino sketch, TurtleBot_Motor_Control.ino, is designed to control the mot
 
 ## Hardware Components
 1. Adafruit Motor Shields:
-* Two shields are used, one at I2C address 0x60 for stepper motors and the other at 0x61 for DC motors.
+  * Two shields are used, one at I2C address 0x60 for stepper motors and the other at 0x61 for DC motors.
 2. Motors:
   * Stepper Motors:
     * myStepper1: Front fin motor (port 1 on the stepper motor shield).
@@ -39,29 +39,6 @@ This Arduino sketch, TurtleBot_Motor_Control.ino, is designed to control the mot
   * Prints the values for debugging.
   * Calls the motorMove() function to process joystick inputs and move the motors.
 3. Functions:
-
-forwardStep(int steps): Moves the front fins forward by stepping both motors in sync.
-backwardStep(int steps): Moves the front fins backward by stepping both motors in sync.
-motorMove(int pwm1, int pwm2, int pwm3, int pwm4): Processes joystick inputs to control DC and stepper motors.
-Usage Instructions
-Hardware Setup:
-
-Connect the stepper motors to the motor shield at I2C address 0x60.
-Connect the DC motors to the motor shield at I2C address 0x61.
-Wire the joysticks to the specified PWM pins on the Arduino board.
-Upload the Code:
-
-Open the TurtleBot_Motor_Control.ino file in the Arduino IDE.
-Select the correct board and COM port in the IDE.
-Upload the code to the Arduino.
-Operation:
-
-Move the left joystick to control the back fins (up/down movement).
-Move the right joystick horizontally to control the water pumps.
-Move the right joystick vertically to control the front fins.
-Notes
-Ensure the motor shield I2C addresses (0x60 and 0x61) do not conflict with other devices on the I2C bus.
-Modify the joystick calibration values (1255, 1821, 1359, 1835) if necessary to match your joystick's PWM range.
-The code assumes a standard motor configuration; adapt it if your hardware setup differs.
-Dependencies
-Adafruit Motor Shield Library: Ensure the latest version is installed in your Arduino IDE.
+  * forwardStep(int steps): Moves the front fins forward by stepping both motors in sync.
+  * backwardStep(int steps): Moves the front fins backward by stepping both motors in sync.
+  * motorMove(int pwm1, int pwm2, int pwm3, int pwm4): Processes joystick inputs to control DC and stepper motors.
